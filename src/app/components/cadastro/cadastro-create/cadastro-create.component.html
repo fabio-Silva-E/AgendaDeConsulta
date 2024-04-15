@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autenticação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #553bc9;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .pure-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pure-form label {
+      margin-bottom: 10px;
+    }
+
+    .pure-form input {
+      margin-bottom: 20px;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pure-button {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form class="pure-form pure-form-stacked">
+      <fieldset>
+        <legend>novo cadastro</legend>
+        <label for="stacked-login">Login</label>
+        <input type="text" id="stacked-login" placeholder="Login" [(ngModel)]="usuario.Login" name="login" />
+        <label for="stacked-password">Senha</label>
+        <input type="password" id="stacked-password" placeholder="Senha" [(ngModel)]="usuario.Senha" name="senha"/>
+        <button type="button" class="pure-button pure-button-primary" (click)="post()">cadastrar</button>
+        <br>
+        <button type="reset" class="pure-button" >Limpar</button>
+        <br>
+        <button type="button" class="pure-button" (click)="back()">Voltar</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .search-icon {
+  color: #faf2f2; /* Cor escura desejada */
+}
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #3326ad;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #e2d3d3;
+      text-align: center;
+    }
+
+    .pure-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .pure-form label {
+      margin-right: 10px;
+    }
+
+    .pure-table {
+      margin: 0 auto;
+    }
+
+    .pure-menu-link {
+      margin-right: 10px;
+    }
+    .custom-button {
+    background-color: #333;
+    color: #fff;
+  }
+    .cursor {
+      cursor: pointer;
+    }
+  </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<body>
+  <div class="container">
+<h1>Lista de Consulta</h1>
+       
+    <form class="pure-form">
+        <label for="idconsulta">CódigoConsulta:</label>
+        <input type="text" id="codigoPesquisa" [(ngModel)]="codigoPesquisa" name="codigoPesquisa">
+        <button type="button" (click)="get()" class="pure-button custom-button ">
+            <i class="fas fa-search search-icon"></i> </button>
+    </form>
+            <form class="pure-form">
+        <button type="button" (click)="create()" class="pure-button">agendar consulta</button>        
+    </form>      
+    <table id="tabelaConsulta" class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>CódigoConsulta</th>
+                <th>CódigoMedico</th>
+                <th>codigoPaciente</th>
+                <th>Data Consulta</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="dadosTabelaConsulta">
+            <tr *ngFor="let c of tC">
+                <td>{{c.IdConsulta}}</td>
+                <td>{{c.Codigom}}</td>
+                <td>{{c.Codigop}}</td>
+                <td>{{c.Data}}</td>
+                <td><a class='pure-menu-link cursor' (click)='editar(c.IdConsulta)'>Editar</a><a class='pure-menu-link cursor' (click)='desejaExcluir(c.IdConsulta)'>Excluir</a></td>
+            </tr>            
+        </tbody>
+    </table>  
+  </div>
+</body>

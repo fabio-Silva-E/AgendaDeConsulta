@@ -1,0 +1,97 @@
+<html>
+<head>
+  <title>Agenda de Consultas Médicas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    nav {
+      background-color: #333;
+      text-align: center;
+    }
+    
+    .pure-menu {
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .pure-menu li {
+      display: inline-block;
+    }
+    
+    .pure-menu-item {
+      margin-right: 10px;
+    }
+    
+    .pure-menu-link {
+      color: #b1a8a8;
+      text-decoration: none;
+      padding: 10px;
+    }
+    
+    .pure-menu-link:active {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <nav class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item"><a routerLink="" class="pure-menu-heading pure-menu-link">Home</a></li>
+      <li class="pure-menu-item"><a routerLink="medico" class="pure-menu-link">Médicos</a></li>
+      <li class="pure-menu-item"><a routerLink="paciente" class="pure-menu-link">Pacientes</a></li>
+      <li class="pure-menu-item"><a routerLink="consulta" class="pure-menu-link">Consultas</a></li>
+      <li class="pure-menu-item"><a routerLink="cadastro" class="pure-menu-link">cadastro de usuarios</a></li>
+
+    </ul>
+  </nav>

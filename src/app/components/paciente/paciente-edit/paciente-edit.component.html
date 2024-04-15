@@ -1,0 +1,93 @@
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #3326ad;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      align-items: 10px;
+      float: center;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .pure-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pure-control-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: 10px;
+    }
+    .pure-control-groupT {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: 5px;
+      float: right;
+    }
+    .pure-control-group label {
+      margin-right: 10px;
+    }
+
+    .pure-form-message-inline {
+      margin-left: 5px;
+      color: red;
+    }
+
+   
+    .pure-controls {
+      display: left;
+      flex-direction: row;
+      justify-content: left;
+      float: left;
+    }
+
+
+    .pure-button {
+      margin: 0 10px;
+    }
+  </style>
+
+<body>
+  <div class="container">
+<h1>Edição de Pacientes</h1>
+<form class="pure-form pure-form-aligned">
+    <div class="pure-control-group">
+        <label>Código:</label>
+        <label id="codigo">{{paciente.Codigo}}</label>
+    </div>
+    <div class="pure-control-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" maxlength="200" [(ngModel)]="paciente.Nome" name="nome">
+        <span class="pure-form-message-inline">*</span>
+    </div>
+    <div class="pure-control-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email"  maxlength="100" [(ngModel)]="paciente.Email" name="email">
+        <span class="pure-form-message-inline">*</span>
+    </div>
+    
+    <div class="pure-controls">
+        <button type="button" class="pure-button pure-button-primary" (click)="desejaAlterar(paciente.Codigo)">Alterar</button>
+        <button type="reset" class="pure-button" >Limpar</button>
+        <button type="button" class="pure-button" (click)="back()">Voltar</button>
+    </div>
+</form>
+  </div>
+</body>
